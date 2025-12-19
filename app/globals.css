@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --sand: #f7f2ea;
+  --sand-strong: #efe6da;
+  --graphite: #1f2328;
+  --slate: #2f3640;
+  --warm: #c8b8a6;
+  --accent: #ad7f5c;
+  --line: #e6ddd2;
+}
+
+@theme inline {
+  --color-sand: var(--sand);
+  --color-sand-strong: var(--sand-strong);
+  --color-graphite: var(--graphite);
+  --color-slate: var(--slate);
+  --color-warm: var(--warm);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --shadow-card: 0 20px 50px -35px rgba(22, 23, 26, 0.35);
+  --shadow-soft: 0 12px 30px -18px rgba(22, 23, 26, 0.28);
+}
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--sand);
+    color: var(--graphite);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
